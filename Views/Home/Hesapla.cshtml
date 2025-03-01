@@ -1,0 +1,65 @@
+@for (int i = 1; i<10;i++) {
+    string ba = "../resimler/avatar_4" + @i + ".png";
+    <div class= "col">
+    <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src=@ba alt="card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Kart Başlığı</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloribus.</p>
+            <a href="#" class="btn btn-primay">Go somewhere</a>
+        </div>
+
+    </div>
+    </div>
+}
+<div class="bg-dark-text-light p 3 my-3">
+    
+
+@{
+    var baslik = "Merhaba Hoşgeldiniz";
+    var sayi1 = 20;
+}
+@if (sayi1 > 10)
+{
+@sayi1 @: sayısı 10 dan büyüktür
+}
+else if (sayi1 < 10)
+{
+    @sayi1 @: sayısı 10 dan küçüktür
+}
+else
+{
+ @sayi1 @: sayısı 10 a eşittir
+}
+
+</div>
+
+<div class="bg-dark-text-light p-3 my-3">
+    @{
+        var mesaj = "Bu mesaj yazısı";
+        @mesaj
+
+        <br>
+
+        var tarih = DateTime .Today.Date.
+        ToShortDateString();
+        <text>Bugünkü tarih</text>
+        <br>
+        @: Bugün, ayın @DateTime.Today.Day. günü
+    }
+</div>
+
+<div class="big-warnig bg-dark-text-light p-3 my-3">
+    @{
+        var haftanınGunu = DateTime.Now.
+DayOfWeek;
+if(haftanınGunu == DayOfWeek. Saturday || haftanınGunu == DayOfWeek. Sunday)
+{
+    <p class="bg-warnig">Haftasonu</p>
+}
+else
+{
+    <p class="bg-primay">Haftaiçi</p>
+}
+    }
+</div>
